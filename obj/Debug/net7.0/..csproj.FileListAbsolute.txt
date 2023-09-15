@@ -1,0 +1,15 @@
+C:\Taller_2\tl2-tp1-2023-AndyRR2\bin\Debug\net7.0\..exe
+C:\Taller_2\tl2-tp1-2023-AndyRR2\bin\Debug\net7.0\..deps.json
+C:\Taller_2\tl2-tp1-2023-AndyRR2\bin\Debug\net7.0\..runtimeconfig.json
+C:\Taller_2\tl2-tp1-2023-AndyRR2\bin\Debug\net7.0\..dll
+C:\Taller_2\tl2-tp1-2023-AndyRR2\bin\Debug\net7.0\..pdb
+C:\Taller_2\tl2-tp1-2023-AndyRR2\obj\Debug\net7.0\..csproj.AssemblyReference.cache
+C:\Taller_2\tl2-tp1-2023-AndyRR2\obj\Debug\net7.0\..GeneratedMSBuildEditorConfig.editorconfig
+C:\Taller_2\tl2-tp1-2023-AndyRR2\obj\Debug\net7.0\..AssemblyInfoInputs.cache
+C:\Taller_2\tl2-tp1-2023-AndyRR2\obj\Debug\net7.0\..AssemblyInfo.cs
+C:\Taller_2\tl2-tp1-2023-AndyRR2\obj\Debug\net7.0\..csproj.CoreCompileInputs.cache
+C:\Taller_2\tl2-tp1-2023-AndyRR2\obj\Debug\net7.0\..dll
+C:\Taller_2\tl2-tp1-2023-AndyRR2\obj\Debug\net7.0\refint\..dll
+C:\Taller_2\tl2-tp1-2023-AndyRR2\obj\Debug\net7.0\..pdb
+C:\Taller_2\tl2-tp1-2023-AndyRR2\obj\Debug\net7.0\..genruntimeconfig.cache
+C:\Taller_2\tl2-tp1-2023-AndyRR2\obj\Debug\net7.0\ref\..dll
