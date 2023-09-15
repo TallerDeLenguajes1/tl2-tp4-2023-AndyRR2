@@ -1,12 +1,13 @@
+//namespace EspacioCadeteria;
 namespace EspacioCadeteria;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Xml;
+//using System.IO;
+//using System.Linq;
+//using System.Xml;
 using EspacioCadete;
 using EspacioPedido;
-using EspacioAccesoADatos;
+//using EspacioAccesoADatos;
 using System.Text;
 
 public class Cadeteria{
@@ -160,7 +161,7 @@ public class Cadeteria{
         }
         
     }
-    /*public void AsignarPedidoACadete(int numero , int id){
+    /*public void AsignarPedidoACadete(int numero , int id){//ya no va
         foreach (var cadete in listaDeCadetes)
         {   
             if (cadete.Id==id){
@@ -169,7 +170,7 @@ public class Cadeteria{
             }
         }
     }*/
-    /*public void mostrarPedidosDeCadeteID(int id){
+    /*public void mostrarPedidosDeCadeteID(int id){//ya no va
         foreach (var cadete in listaDeCadetes)
         {
             if (cadete.Id==id)
@@ -178,13 +179,13 @@ public class Cadeteria{
             }
         }
     }*/
-    /*public void RemoverPedidoCadete(int numero){
+    /*public void RemoverPedidoCadete(int numero){//ya no va
         foreach (var cadete in listaDeCadetes)
         {
             cadete.RemoverPedido(numero);
         }
     }*/
-    /*public void ReasignarPedido(int numero, int id){
+    /*public void ReasignarPedido(int numero, int id){//ya no va
         foreach (var pedido in listaPedidosCadeteria)
         {
             if (pedido.Nro==numero)

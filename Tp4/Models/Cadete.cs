@@ -30,7 +30,7 @@ public class Cadete{
         "\nDireccion: " + direccion +
         "\nTelefono: " + telefono);
     }
-    /*public void MostrarPedidosDelCadete(){
+    /*public void MostrarPedidosDelCadete(){/ya no va
         foreach (var pedido in listadoDePedidos)
         {
             Console.WriteLine("Numero: " + pedido.Nro);

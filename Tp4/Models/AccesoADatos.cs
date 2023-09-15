@@ -1,5 +1,5 @@
 namespace EspacioAccesoADatos;
-using EspacioCadeteria;
+//using EspacioCadeteria;
 using EspacioCadete;
 using System;
 using System.Collections.Generic;
@@ -13,9 +13,7 @@ public class AccesoADatos{
     public virtual void cargarCadetes(string archivo){
         Console.WriteLine("Base");
     }
-
 }
-
 public class AccesoCSV: AccesoADatos{
     public override void cargarCadetes(string archivo){
         List<Cadete> cadetes = new List<Cadete>();
