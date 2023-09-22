@@ -10,24 +10,6 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-/*//-------------
-int opcion = 0;
-      Console.WriteLine("Cargar Datos con 1-CSV o 2-JSON");
-      string? entrada = Console.ReadLine();
-      bool result = int.TryParse(entrada, out opcion);
-      
-      AccesoADatos acceso = new AccesoADatos();
-      string? direccion = "Cadetes";
-      if (opcion==1)
-      {
-        acceso = new AccesoCSV();
-      }else if (opcion==2)
-      {
-        acceso = new AccesoJSON();
-      }
-      acceso.cargarCadetes(direccion);
-//-----------------*/
-
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

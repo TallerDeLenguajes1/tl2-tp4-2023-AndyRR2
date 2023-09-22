@@ -1,16 +1,26 @@
-//namespace EspacioCadeteria;
 namespace EspacioCadeteria;
+using EspacioAccesoADatos;
 using System;
 using System.Collections.Generic;
-//using System.IO;
-//using System.Linq;
-//using System.Xml;
 using EspacioCadete;
 using EspacioPedido;
-//using EspacioAccesoADatos;
 using System.Text;
 
 public class Cadeteria{
+    private static Cadeteria cadeteriaSingleton;
+
+    public static Cadeteria GetCadeteria()//instanciar cadeteria modo Singleton
+    {
+        if(cadeteriaSingleton == null)
+        {
+            AccesoADatos acceso = new AccesoADatos();//instacia acceso a datos
+            string? direccion = "Cadetes";// establece direccion del archivo de los cadetes
+            acceso = new AccesoCSV();//usa el metodo para CSV
+            acceso.cargarCadetes(direccion);//carga los cadetes en acceso a datos
+            cadeteriaSingleton= new Cadeteria("Mensajes Cadeteria",3816161383,acceso.ListaCadetes);//instancio a la clase en en logger
+        }
+        return cadeteriaSingleton;
+    }
     private string? nombre;
     private double telefono;
     private List<Pedido> listaPedidosCadeteria = new List<Pedido>(); 
@@ -27,7 +37,7 @@ public class Cadeteria{
         this.telefono = telefono;
         this.ListaDeCadetes = listaCadetes;
     }
-    public void DarDeAltaPedido(){//*********************
+    public Pedido DarDeAltaPedido(){//*********************
         int numero;
         string? obs, nombreCliente, direccion, referencia;
         double telefonoCliente;
@@ -52,9 +62,13 @@ public class Cadeteria{
         Console.WriteLine("Ingrese una referencia para la dirección");
         referencia = Console.ReadLine();
         Pedido pedido = new Pedido(numero, obs, nombreCliente, direccion, telefonoCliente, referencia);
-        listaPedidosCadeteria.Add(pedido);
+        return(pedido);
     }
-    
+    public List<Pedido> AgregarPedido(int numero_de_pedido, string? observacion, string? nombre_cliente, string? direccion,int telefono, string? referencia){
+        Pedido P = new Pedido(numero_de_pedido, observacion, nombre_cliente, direccion, telefono, referencia);
+        listaPedidosCadeteria.Add(P);
+        return(listaPedidosCadeteria);
+    }
     public string mostrarDatosCadetes(){//ok
         if (listaDeCadetes!=null)
         {
@@ -67,8 +81,7 @@ public class Cadeteria{
         {
             return("Lista de Cadetes vacia");
         }
-    }
-    
+    } 
     public string mostrarPedidosCadeteria(){//ok
     if (listaPedidosCadeteria!=null)
     {
@@ -142,6 +155,23 @@ public class Cadeteria{
             }
         }
         return(var);
+    }
+    public Cadete GetCadeteDePedido(int idPedido){
+        Cadete cadete=null;
+        if (listaPedidosCadeteria!=null)
+        {
+            foreach (var pedido in listaPedidosCadeteria)
+            {
+                if (pedido.Nro==idPedido)
+                {
+                    cadete=pedido.Cadete;
+                }
+            }
+            return(cadete);
+        }else
+        {
+            return(null);
+        }
     }
     public string mostrarCadeteDePedido(int numero){//ok
         if (listaPedidosCadeteria!=null)
